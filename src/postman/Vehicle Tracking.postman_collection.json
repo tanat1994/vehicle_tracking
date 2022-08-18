@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "face5735-50ba-4df4-b7c5-4de5caf19442",
+		"name": "Vehicle Tracking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:1339/api/v1/vehicle/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"model\": \"test\",\n    \"serialNumber\": \"testSerialNumber\",\n    \"type\": 2,\n    \"chipSerialCode\": \"zXAAQ\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:1339/api/v1/vehicle/register",
+					"host": [
+						"localhost"
+					],
+					"port": "1339",
+					"path": [
+						"api",
+						"v1",
+						"vehicle",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:1339/api/v1/vehicle/recordLocation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"lat\": -90.0249,\n    \"long\": -172.0241,\n    \"vehicleId\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:1339/api/v1/vehicle/recordLocation",
+					"host": [
+						"localhost"
+					],
+					"port": "1339",
+					"path": [
+						"api",
+						"v1",
+						"vehicle",
+						"recordLocation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:1339/admin/vehicleList",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:1339/admin/vehicleList",
+					"host": [
+						"localhost"
+					],
+					"port": "1339",
+					"path": [
+						"admin",
+						"vehicleList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:1339/admin/location",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"vehicleId\": 2,\n    \"startTime\": \"2022-08-11\",\n    \"endTime\": \"2022-08-19\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:1339/admin/location",
+					"host": [
+						"localhost"
+					],
+					"port": "1339",
+					"path": [
+						"admin",
+						"location"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
